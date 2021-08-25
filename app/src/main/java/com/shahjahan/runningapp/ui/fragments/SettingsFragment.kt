@@ -1,4 +1,4 @@
-package com.shahjahan.runningapp.ui.viewmodels.fragments
+package com.shahjahan.runningapp.ui.fragments
 
 import androidx.fragment.app.Fragment
 import com.shahjahan.runningapp.R

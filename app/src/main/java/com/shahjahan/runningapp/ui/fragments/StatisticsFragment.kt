@@ -1,9 +1,8 @@
-package com.shahjahan.runningapp.ui.viewmodels.fragments
+package com.shahjahan.runningapp.ui.fragments
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.shahjahan.runningapp.R
-import com.shahjahan.runningapp.ui.viewmodels.MainViewModel
 import com.shahjahan.runningapp.ui.viewmodels.StatisticsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

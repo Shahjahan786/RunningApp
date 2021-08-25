@@ -3,9 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
     app:startDestination="@id/setupFragment">
 
+    <action android:id="@+id/action_global_trackingFragment"
+        app:destination="@+id/trackingFragment"
+        app:launchSingleTop="true"/>
+
     <fragment
         android:id="@+id/setupFragment"
-        android:name="com.shahjahan.runningapp.ui.viewmodels.fragments.SetupFragment"
+        android:name="com.shahjahan.runningapp.ui.fragments.SetupFragment"
         android:label="SetupFragment" >
         <action
             android:id="@+id/action_setupFragment_to_runFragment"
@@ -13,25 +17,19 @@
     </fragment>
     <fragment
         android:id="@+id/runFragment"
-        android:name="com.shahjahan.runningapp.ui.viewmodels.fragments.RunFragment"
+        android:name="com.shahjahan.runningapp.ui.fragments.RunFragment"
         android:label="RunFragment" >
-        <action
-            android:id="@+id/action_runFragment_to_statisticsFragment"
-            app:destination="@id/statisticsFragment" />
         <action
             android:id="@+id/action_runFragment_to_trackingFragment"
             app:destination="@id/trackingFragment" />
-        <action
-            android:id="@+id/action_runFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/statisticsFragment"
-        android:name="com.shahjahan.runningapp.ui.viewmodels.fragments.StatisticsFragment"
+        android:name="com.shahjahan.runningapp.ui.fragments.StatisticsFragment"
         android:label="StatisticsFragment" />
     <fragment
         android:id="@+id/trackingFragment"
-        android:name="com.shahjahan.runningapp.ui.viewmodels.fragments.TrackingFragment"
+        android:name="com.shahjahan.runningapp.ui.fragments.TrackingFragment"
         android:label="TrackingFragment" >
         <action
             android:id="@+id/action_trackingFragment_to_runFragment"
@@ -39,6 +37,6 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.shahjahan.runningapp.ui.viewmodels.fragments.SettingsFragment"
+        android:name="com.shahjahan.runningapp.ui.fragments.SettingsFragment"
         android:label="SettingsFragment" />
 </navigation>

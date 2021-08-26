@@ -66,6 +66,10 @@ class TrackingServices : LifecycleService() {
         pathPoints.postValue(mutableListOf())
     }
 
+    private fun pauseService(){
+        isTracking.postValue(false)
+    }
+
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 
         intent?.let {
@@ -76,10 +80,12 @@ class TrackingServices : LifecycleService() {
                     isFirstRun = false;
                    }else {
                        Timber.d("resumed service")
+                       startForegroundService()
                    }
                }
                ACTION_PAUSE_SERVICE ->{
                    Timber.d("paused service")
+                   pauseService()
                }
               ACTION_STOP_SERVICE ->{
                   Timber.d("stoped service")
